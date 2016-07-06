@@ -30,7 +30,8 @@
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.13",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "whatwg-fetch": "^1.0.0"
   },
   "scripts": {
     "start": "webpack-dev-server --history-api-fallback --no-info --open"

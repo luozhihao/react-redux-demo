@@ -1,4 +1,4 @@
-import { INCREASE, DECREASE } from '../../constants'
+import { INCREASE, DECREASE, LOADDATA } from '../../constants'
 
 export const increase = n => {
     return {
@@ -11,5 +11,11 @@ export const decrease = n => {
     return {
         type: DECREASE,
         amount: n
+    }
+}
+
+export const getData = () => {
+    return {
+        type: LOADDATA
     }
 }

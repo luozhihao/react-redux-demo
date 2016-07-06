@@ -32,6 +32,4 @@ const getList = state => {
     }
 }
 
-export default connect(
-    getList
-)(Foo)
+export default connect(getList)(Foo)
