@@ -1,20 +1,25 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getData } from '../actions/count'
+import { fetchPostsIfNeeded, refreshData } from '../actions/count'
 
 class Bar extends Component {
-    render() {
-        const { lists, getData } = this.props
+    componentDidMount() {
+        const { refreshData } = this.props
 
-        console.log(this.props)
+        refreshData()
+    }
+
+    render() {
+        const { lists, fetchPostsIfNeeded } = this.props
         
         return (
             <div>
-                <div>And I am Bar!</div>
-                <button type="button" className="btn btn-default" onClick={() => getData()}>加载数据</button>
-                <div>
-                    { lists }
-                </div>
+                <button type="button" className="btn btn-default" onClick={() => fetchPostsIfNeeded()}>加载数据</button>
+                <ul>
+                    {lists.map((e, index) => 
+                        <li key={index}><a href={e.url} target="_blank">{e.title}</a></li>
+                    )}
+                </ul>
             </div>
         )
     }
@@ -28,5 +33,5 @@ const getList = state => {
 
 export default connect(
     getList, 
-    { getData }
+    { fetchPostsIfNeeded, refreshData }
 )(Bar)

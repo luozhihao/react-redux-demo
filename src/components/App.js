@@ -13,14 +13,14 @@ export default class App extends Component {
                             </span>
                         </div>
                         <ul className="nav navbar-nav">
-                            <li className="active">
-                                <Link to="/">首页</Link>
+                            <li>
+                                <Link to="/index" activeStyle={{color: '#555', backgroundColor: '#e7e7e7'}}>首页</Link>
                             </li>
                             <li>
-                                <Link to="/foo">Foo</Link>
+                                <Link to="/foo" activeStyle={{color: '#555', backgroundColor: '#e7e7e7'}}>Foo</Link>
                             </li>
                             <li>
-                                <Link to="/bar">Bar</Link>
+                                <Link to="/bar" activeStyle={{color: '#555', backgroundColor: '#e7e7e7'}}>Bar</Link>
                             </li>
                         </ul>
                     </div>

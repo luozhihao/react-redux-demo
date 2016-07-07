@@ -1,5 +1,4 @@
-import { INCREASE, DECREASE, LOADDATA } from '../../constants'
-import 'whatwg-fetch'
+import { INCREASE, DECREASE, GETSUCCESS, REFRESHDATA } from '../../constants'
 
 const initialState = {
     number: 1,
@@ -15,17 +14,10 @@ export default function update(state = initialState, action) {
         case DECREASE:
             return Object.assign({}, state, { number: state.number - action.amount })
             break
-        case LOADDATA:
-            let obj = fetch('data.json')
-                .then((res) => { console.log(res.status); return res.json() })
-                .then((data) => {
-                    return Object.assign({}, state, { data: data.listData })
-                })
-                .catch((e) => { console.log(e.message) })
-
-            console.log(obj)
-            return  obj
-            break
+        case GETSUCCESS:
+            return Object.assign({}, state, { data: action.json })
+        case REFRESHDATA:
+            return Object.assign({}, state, { data: [] })
         default:
             return state
     }
