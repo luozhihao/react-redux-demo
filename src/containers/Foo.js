@@ -1,6 +1,7 @@
+// 静态数据
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import List from './List.js'
+import List from '../components/List'
 
 export default class Foo extends Component {
     render() {
@@ -28,7 +29,7 @@ Foo.propTypes = {
 
 const getList = state => {
     return {
-        lists: state.count.lists
+        lists: state.update.lists
     }
 }
 

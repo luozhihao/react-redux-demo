@@ -1,3 +1,4 @@
+// 全局导航
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 
@@ -14,13 +15,13 @@ export default class App extends Component {
                         </div>
                         <ul className="nav navbar-nav">
                             <li>
-                                <Link to="/index" activeStyle={{color: '#555', backgroundColor: '#e7e7e7'}}>首页</Link>
+                                <Link to="/index" activeStyle={{color: '#555', backgroundColor: '#e7e7e7'}}>计数器</Link>
                             </li>
                             <li>
-                                <Link to="/foo" activeStyle={{color: '#555', backgroundColor: '#e7e7e7'}}>Foo</Link>
+                                <Link to="/foo" activeStyle={{color: '#555', backgroundColor: '#e7e7e7'}}>静态数据</Link>
                             </li>
                             <li>
-                                <Link to="/bar" activeStyle={{color: '#555', backgroundColor: '#e7e7e7'}}>Bar</Link>
+                                <Link to="/bar" activeStyle={{color: '#555', backgroundColor: '#e7e7e7'}}>动态数据</Link>
                             </li>
                         </ul>
                     </div>

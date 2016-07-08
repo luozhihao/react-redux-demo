@@ -1,3 +1,4 @@
+// 动态数据列表
 import React, { Component, PropTypes } from 'react'
 
 export default class List extends Component {

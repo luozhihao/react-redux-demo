@@ -1,5 +1,5 @@
 import { INCREASE, DECREASE, GETSUCCESS, REFRESHDATA } from '../../constants'
-import 'whatwg-fetch'
+import 'whatwg-fetch'  // 引入fetch
 
 export const increase = n => {
     return {
