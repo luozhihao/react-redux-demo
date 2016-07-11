@@ -1,6 +1,5 @@
-// 全局导航
-import React, { Component } from 'react'
-import { Link } from 'react-router'
+import React, { Component } from 'react' // 引入React
+import { Link } from 'react-router' // 引入Link处理导航跳转
 
 export default class App extends Component {
     render() {
@@ -22,6 +21,9 @@ export default class App extends Component {
                             </li>
                             <li>
                                 <Link to="/bar" activeStyle={{color: '#555', backgroundColor: '#e7e7e7'}}>动态数据</Link>
+                            </li>
+                            <li>
+                                <Link to="/antd" activeStyle={{color: '#555', backgroundColor: '#e7e7e7'}}>结合antd</Link>
                             </li>
                         </ul>
                     </div>

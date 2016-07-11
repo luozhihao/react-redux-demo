@@ -1,7 +1,6 @@
-// 路由组件
-import React from 'react'
-import { Route, IndexRoute } from 'react-router'
-import { App, Home, Foo, Bar } from './containers'
+import React from 'react' // 引入react
+import { Route, IndexRoute } from 'react-router' // 引入react路由
+import { App, Home, Foo, Bar, Antd } from './containers' // 引入各容器组件
 
 export default (
     <Route path="/" component={App}>
@@ -9,5 +8,6 @@ export default (
         <Route path="index" component={Home}/>
         <Route path="foo" component={Foo}/>
         <Route path="bar" component={Bar}/>
+        <Route path="antd" component={Antd}/>
     </Route>
 )
