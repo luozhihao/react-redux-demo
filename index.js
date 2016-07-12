@@ -11,18 +11,16 @@ import routes from './src/routes'   // 引入路由配置
 
 import './assets/css/bootstrap.min.css'  // 引入样式文件
 
+// 给增强后的store传入reducer
 const store = finalCreateStore(reducer)
 
 // 创建一个增强版的history来结合store同步导航事件
 const history = syncHistoryWithStore(browserHistory, store)
 
 render(
-    {/* 利用Provider包裹页面 */}
     <Provider store={store}>
         <div>
-            {/* 渲染根路由 */}
             <Router history={history} routes={routes} />
-            {/* 渲染调试组件 */}
             <DevTools />
         </div>
     </Provider>,
