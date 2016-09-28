@@ -11,7 +11,7 @@ export default class Foo extends Component {
         return(
             <div>
                 <ul className="list-group">
-                    {将值传入展示组件}
+                    {/*将值传入展示组件*/}
                     { lists.map((e, index) => 
                         <List text={e.text} key={index}></List>
                     )}

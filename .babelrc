@@ -1,4 +1,4 @@
 {
     "presets": ["es2015", "react", "stage-1"],
-    "plugins": [["antd",  { "style": "css" }]]
+    "plugins": [["antd",  { "style": "css" }], "transform-object-assign"]
 }
