@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react' // 引入React
 import { connect } from 'react-redux' // 引入connect 
 import List from '../components/List'  // 引入展示组件List
 
-export default class Foo extends Component {
+class Foo extends Component {
     render() {
     
         // 通过this.props获取到lists的值
